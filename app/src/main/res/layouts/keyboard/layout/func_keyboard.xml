@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/keyboard"
+                android:layout_width="match_parent"
+                android:layout_height="245dp"
+                android:layout_gravity="bottom"
+                android:background="@color/green"
+                android:paddingTop="5dp">
+    <TableLayout
+            android:id="@+id/topRow"
+            android:layout_width = "fill_parent"
+            android:layout_height = "wrap_content">
+        <TableRow android:layout_width="match_parent" android:layout_height="wrap_content">
+            <Button style="@style/KeyboardUpperButton"
+                    android:text="abc"
+                    android:id="@+id/btnLetter"
+                    android:tag="SWITCH_TO_LETTERS"/>
+            <Button style="@style/KeyboardUpperButton"
+                    android:text="f(x)" android:id="@+id/btnFuncRemove"
+                    android:backgroundTint = "@color/grey"
+                    android:tag="SWITCH_TO_MAIN"/>
+            <Button style="@style/KeyboardUpperButton"
+                    app:icon="@drawable/left_arrow"
+                    android:gravity="center"
+                    android:id="@+id/btnCursorLeft"
+                    android:tag="CURSOR_LEFT"/>
+            <Button style="@style/KeyboardUpperButton"
+                    app:icon="@drawable/right_arrow"
+                    android:id="@+id/btnCursorRight"
+                    android:tag="CURSOR_RIGHT"/>
+            <Button style = "@style/KeyboardUpperButton"
+                    app:icon="@drawable/backspace"
+                    android:id = "@+id/btnBackspace"
+                    android:tag="BACKSPACE"/>
+        </TableRow>
+    </TableLayout>
+    <TableLayout  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@+id/topRow">
+        <TableRow android:layout_width="match_parent"
+                  android:layout_height="wrap_content">
+            <Button style="@style/KeyboardLetterButton"
+                    android:text="x"
+                    android:tag="LETTER"
+                    android:id="@+id/btnX"/>
+            <Button style="@style/KeyboardNumberButton"
+                    android:text="∫"
+                    android:tag="INTEGRAL"
+                    android:id="@+id/btnIntegral"/>
+            <Button style="@style/KeyboardNumberButton"
+                    android:tag="DERIVATIVE"
+                    android:text="f'"
+                    android:id="@+id/btnDerivative"/>
+            <Button style="@style/KeyboardNumberButton"
+                    android:tag="INFINITY"
+                    app:icon="@drawable/infinity"
+                    app:iconSize="18dp"
+                    android:id="@+id/btnInfinity"/>
+            <Button style="@style/KeyboardOperationButton"
+                    android:tag="LETTER"
+                    android:text="+"
+                    android:id="@+id/btnPlus" />
+            <Button style="@style/KeyboardOperationButton"
+                    android:tag="LETTER"
+                    android:text="-"
+                    android:id="@+id/btnMinus"/>
+        </TableRow>
+        <TableRow android:layout_width = "match_parent" android:layout_height="wrap_content">
+            <Button style="@style/KeyboardNumberButton"
+                    android:tag="LETTER"
+                    android:text="e"
+                    android:id="@+id/btnExponent"/>
+            <Button style="@style/KeyboardNumberButton"
+                    android:tag="FUNCTION"
+                    android:text="ln"
+                    android:id="@+id/btnLog"/>
+            <Button style="@style/KeyboardNumberButton"
+                    android:tag="DETERMINANT"
+                    android:text="det"
+                    android:id="@+id/btnDeterminant"/>
+            <Button style="@style/KeyboardNumberButton"
+                    android:tag="MATRIX"
+                    app:icon="@drawable/matrix_icon"
+                    app:iconSize="18dp"
+                    android:id="@+id/btnMatrix"/>
+            <Button style="@style/KeyboardOperationButton"
+                    android:tag="LETTER"
+                    android:text="("
+                    android:id="@+id/btnLeftBracket"/>
+            <Button style="@style/KeyboardOperationButton"
+                    android:tag="LETTER"
+                    android:text=")"
+                    android:id="@+id/btnRightBracket"/>
+        </TableRow>
+        <TableRow android:layout_width="match_parent" android:layout_height="wrap_content">
+            <Button style="@style/KeyboardOperationButton"
+                    app:icon="@drawable/power"
+                    app:iconSize="15dp"
+                    android:tag="POWER"
+                    android:id="@+id/btnPower"/>
+            <Button style="@style/KeyboardNumberButton"
+                    android:tag="LIMIT"
+                    android:text="lim"
+                    android:id="@+id/btnLimit"/>
+            <Button style="@style/KeyboardNumberButton"
+                    android:tag="FUNCTION"
+                    android:text="sin"
+                    android:id="@+id/btnSine"/>
+            <Button style="@style/KeyboardNumberButton"
+                    android:tag="FUNCTION"
+                    android:text="cos"
+                    android:id="@+id/btnCosine"/>
+            <Button style="@style/KeyboardOperationButton"
+                    android:tag="LETTER"
+                    android:text="×"
+                    android:id="@+id/btnMultiply"/>
+            <Button style="@style/KeyboardOperationButton"
+                    android:tag="LETTER"
+                    android:text="÷"
+                    android:id="@+id/btnFraction"/>
+        </TableRow>
+        <TableRow android:layout_width="match_parent" android:layout_height="wrap_content">
+            <Button style="@style/KeyboardOperationButton"
+                    app:icon="@drawable/sqrt"
+                    app:iconSize = "25dp"
+                    android:tag="SQUARE_ROOT"
+                    android:id="@+id/btnSqrt"/>
+            <Button style="@style/KeyboardNumberButton"
+                         android:tag="SUM"
+                    app:icon="@drawable/sum"
+                    app:iconSize="25dp"
+                    android:id="@+id/btnSum"/>
+            <Button style="@style/KeyboardNumberButton"
+                    android:tag="FUNCTION"
+                    android:text="tg"
+                    android:id="@+id/btnTangent"/>
+            <Button style="@style/KeyboardNumberButton"
+                    android:tag="FUNCTION"
+                    android:text="ctg"
+                    android:id="@+id/btnCotangent"/>
+            <Button style="@style/KeyboardNumberButton"
+                    android:tag="LETTER"
+                    android:text="°"
+                    android:id="@+id/btnDegree"/>
+            <Button style="@style/KeyboardOperationButton"
+                    android:tag="LETTER"
+                    android:text="="
+                    android:id="@+id/btnEquals"/>
+        </TableRow>
+    </TableLayout>
+</RelativeLayout>

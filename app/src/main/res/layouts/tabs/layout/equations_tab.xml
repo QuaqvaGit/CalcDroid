@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout style="@style/Default"
+                android:id="@+id/equationsTab"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#f8ffcc"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:focusableInTouchMode="true"
+                android:clickable="true"
+                android:focusable="true">
+
+        <EditText style="@style/MathInput"
+                  android:id="@+id/eqInput"
+                  android:layout_marginTop="30dp"
+                  android:hint="@string/eq_hint"
+        />
+
+        <TextView style="@style/MathInput"
+                  android:id="@+id/eqOutput"
+                  android:layout_marginTop="110dp" />
+</RelativeLayout>

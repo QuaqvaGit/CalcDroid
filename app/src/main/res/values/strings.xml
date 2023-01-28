@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">CalcDroid</string>
+    <string name="eq_hint">Введите выражение...</string>
+    <string name="graph_hint">Введите функцию...</string>
+</resources>

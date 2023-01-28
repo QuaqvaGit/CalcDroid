@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/keyboard"
+                android:layout_width="match_parent"
+                android:layout_height="245dp"
+                android:layout_gravity="bottom"
+                android:background="@color/green"
+                android:paddingTop="5dp">
+    <TableLayout
+            android:id="@+id/topRow"
+        android:layout_width = "fill_parent"
+        android:layout_height = "wrap_content"
+        android:layout_gravity = "top">
+        <TableRow android:layout_width="match_parent" android:layout_height="match_parent">
+            <Button style="@style/KeyboardUpperButton"
+                    android:text="abc" android:id="@+id/btnLetterRemove"
+                    android:backgroundTint = "@color/grey"
+                    android:tag="SWITCH_TO_MAIN"/>
+            <Button style="@style/KeyboardUpperButton"
+                    android:text="f(x)" android:id="@+id/btnFunc"
+                    android:tag="SWITCH_TO_FUNCTIONS"/>
+            <Button style="@style/KeyboardUpperButton"
+                    android:tag="CURSOR_LEFT"
+                    app:icon="@drawable/left_arrow"
+                    android:gravity="center"
+                    android:id="@+id/btnCursorLeft"/>
+            <Button style="@style/KeyboardUpperButton"
+                    android:tag="CURSOR_RIGHT"
+                    app:icon="@drawable/right_arrow"
+                    android:id="@+id/btnCursorRight"/>
+            <Button style = "@style/KeyboardUpperButton"
+                    android:tag="BACKSPACE"
+                    app:icon="@drawable/backspace"
+                    android:id = "@+id/btnBackspace"/>
+        </TableRow>
+    </TableLayout>
+    <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/topRow">
+        <TableRow android:layout_width="match_parent" android:layout_height="match_parent">
+            <Button style="@style/KeyboardLetterButton"
+                    android:tag="LETTER"
+                    android:text="a"
+                    android:id="@+id/btnA"/>
+            <Button style="@style/KeyboardLetterButton"
+                    android:tag="LETTER"
+                    android:text="b"
+                    android:id="@+id/btnB"/>
+            <Button style="@style/KeyboardLetterButton"
+                    android:tag="LETTER"
+                    android:text="c"
+                    android:id="@+id/btnC"/>
+            <Button style="@style/KeyboardLetterButton"
+                    android:tag="LETTER"
+                    android:text="d"
+                    android:id="@+id/btnD"/>
+            <Button style="@style/KeyboardLetterButton"
+                    android:tag="LETTER"
+                    android:text="e" android:id="@+id/btnE"/>
+            <Button style="@style/KeyboardLetterButton"
+                    android:tag="LETTER"
+                    android:text="f"
+                    android:id="@+id/btnF"/>
+            <Button style="@style/KeyboardLetterButton"
+                    android:tag="LETTER"
+                    android:text="g"
+                    android:id="@+id/btnG"/>
+        </TableRow>
+        <TableRow android:layout_width="match_parent" android:layout_height="match_parent">
+            <Button style="@style/KeyboardLetterButton"
+                    android:tag="LETTER"
+                    android:text="h"
+                    android:id="@+id/btnH"/>
+            <Button style="@style/KeyboardLetterButton"
+                    android:tag="LETTER"
+                    android:text="i"
+                    android:id="@+id/btnI"/>
+            <Button style="@style/KeyboardLetterButton"
+                    android:tag="LETTER"
+                    android:text="j"
+                    android:id="@+id/btnJ"/>
+            <Button style="@style/KeyboardLetterButton"
+                    android:tag="LETTER"
+                    android:text="k" android:id="@+id/btnK"/>
+            <Button style="@style/KeyboardLetterButton"
+                    android:tag="LETTER"
+                    android:text="l"
+                    android:id="@+id/btnL"/>
+            <Button style="@style/KeyboardLetterButton"
+                    android:tag="LETTER"
+                    android:text="m"
+                    android:id="@+id/btnM"/>
+            <Button style="@style/KeyboardLetterButton"
+                    android:tag="LETTER"
+                    android:text="n"
+                    android:id="@+id/btnN"/>
+        </TableRow>
+        <TableRow android:layout_width="match_parent" android:layout_height="match_parent">
+            <Button style="@style/KeyboardLetterButton"
+                    android:tag="LETTER"
+                    android:text="o"
+                    android:id="@+id/btnO"/>
+            <Button style="@style/KeyboardLetterButton"
+                    android:tag="LETTER"
+                    android:text="p"
+                    android:id="@+id/btnP"/>
+            <Button style="@style/KeyboardLetterButton"
+                    android:tag="LETTER"
+                    android:text="q" android:id="@+id/btnQ"/>
+            <Button style="@style/KeyboardLetterButton"
+                    android:tag="LETTER"
+                    android:text="r"
+                    android:id="@+id/btnR"/>
+            <Button style="@style/KeyboardLetterButton"
+                    android:tag="LETTER"
+                    android:text="s"
+                    android:id="@+id/btnS"/>
+            <Button style="@style/KeyboardLetterButton"
+                    android:tag="LETTER"
+                    android:text="t"
+                    android:id="@+id/btnT"/>
+            <Button style="@style/KeyboardLetterButton"
+                    android:tag="LETTER"
+                    android:text="u"
+                    android:id="@+id/btnU"/>
+        </TableRow>
+        <TableRow
+                android:layout_width="match_parent" android:layout_height="89dp"
+                android:layout_gravity = "center_horizontal"
+                android:orientation="horizontal">
+            <Button style="@style/KeyboardLetterButton"
+                    app:icon="@drawable/caps_arrow"
+                    android:id="@+id/btnUpperCase"
+                    android:tag="SWITCH_CAPS"/>
+            <Button style="@style/KeyboardLetterButton"
+                    android:tag="LETTER"
+                    android:text="v"
+                    android:id="@+id/btnV"/>
+            <Button style="@style/KeyboardLetterButton"
+                    android:tag="LETTER"
+                    android:text="w"
+                    android:id="@+id/btnW"/>
+            <Button style="@style/KeyboardLetterButton"
+                    android:tag="LETTER"
+                    android:text="x"
+                    android:id="@+id/btnX"/>
+            <Button style="@style/KeyboardLetterButton"
+                    android:tag="LETTER"
+                    android:text="y"
+                    android:id="@+id/btnY"/>
+            <Button style="@style/KeyboardLetterButton"
+                    android:tag="LETTER"
+                    android:text="z"
+                    android:id="@+id/btnZ"/>
+            <Button style="@style/KeyboardLetterButton"
+                    android:tag="SUBSCRIPT"
+                    app:icon="@drawable/subscript"
+                    app:iconSize="23dp"
+                    android:id="@+id/btnSubscript"/>
+        </TableRow>
+    </TableLayout>
+</RelativeLayout>
+
+

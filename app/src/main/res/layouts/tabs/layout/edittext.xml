@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="horizontal"
+              android:background="@drawable/border"
+              android:padding="7dp"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+        <EditText
+                android:id="@+id/graph_input"
+                android:layout_height="50dp"
+                android:textSize="18sp"
+                style="@style/MathInput"
+                android:hint="@string/graph_hint"
+                android:layout_width="210dp"
+        />
+        <EditText style="@style/MathInput"
+                android:id="@+id/left_border"
+                android:layout_width="50dp"
+        />
+        <TextView
+                android:id="@+id/border_text"
+                android:text="&lt; x &lt;"
+                android:textSize="19sp"
+                android:textColor="@color/black"
+                android:layout_height="50dp"
+                android:layout_width="wrap_content"
+
+        />
+        <EditText style="@style/MathInput"
+                android:id="@+id/right_border"
+                android:layout_width="50dp"
+        />
+        <Button style="@style/GraphDeleteButton"
+                android:id="@+id/delete_btn"/>
+
+</LinearLayout>
